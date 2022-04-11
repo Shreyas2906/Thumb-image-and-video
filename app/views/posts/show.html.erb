@@ -14,20 +14,21 @@
   <strong>Image:</strong>
   <%# %>
   <%#= image_tag @post.image_url %>
-  <%#= image_tag (@post.image.thumb.url) if @post.image? %>
+  <%= image_tag (@post.image.thumb.url) if @post.image? %>
   <%#= image_tag(@post.video.thumb.url, alt: 'Video') if @post.video? %>
 </p> -->
-
+ <%= image_tag (@post.image.thumb.url) if @post.image? %>
 <p>
   <strong>Video:</strong>
   <%# %>
   <%= image_tag(@post.video.thumb.url, alt: 'Video') if @post.video? %>
 </p>
-<%= image_tag "https://d3y4ba341vnbk.cloudfront.net/assets/uploads/bx_block_post/post_attachment/attachment/491/medium_Intro_to_Rails__What_is_Ruby_on_Rails_.jpg" %>
-<%= video_tag "https://d3y4ba341vnbk.cloudfront.net/assets/uploads/bx_block_post/post_attachment/attachment/491/Intro_to_Rails__What_is_Ruby_on_Rails_.mp4", controls: true, size: 200 %>
+<%= image_tag "https://chingching-bucket.s3.ap-southeast-1.amazonaws.com/uploads/post/video/3/image_download.jpeg" %>
+<%#= video_tag "https://d3y4ba341vnbk.cloudfront.net/assets/uploads/bx_block_post/post_attachment/attachment/491/Intro_to_Rails__What_is_Ruby_on_Rails_.mp4", controls: true, size: 200 %>
 <p>
   <strong>Video:</strong>
-  <%# %>
+
+  <%# byebug %>
   <%= video_tag @post.video.url, alt: 'Video', controls: true, size: 200  if @post.video? %>
 </p>
 
